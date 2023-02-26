@@ -1,6 +1,6 @@
 const jwt=require("jsonwebtoken");
 
-const authenticate=(req,res,next)=>{
+const auth=(req,res,next)=>{
     const token=req.headers.authorization;
     if(token){
         jwt.verify(token,"masai",(err,decoded)=>{
@@ -17,5 +17,5 @@ const authenticate=(req,res,next)=>{
 }
 
 module.exports={
-    authenticate
+    auth
 }

@@ -1,111 +1,317 @@
 /* navbar */
 
-#navbar{
-    height:70px;
-    width:100%;
-    
+#navbar {
+    height: 70px;
+    width: 100%;
+    margin-top: -22px;
+    padding-top: 5px;
+    background-color: white;
+    position: fixed;
     display: flex;
     justify-content: space-between;
-    
+
 }
-#navbar1{
-    height:100%;
-    width:60%;
+
+#navbar1 {
+    height: 100%;
+    width: 50%;
     display: flex;
     margin-left: 10px;
 
 }
-#navbar1>div>img{
-    width:60px;
+
+#navbar1>div>img {
+    width: 60px;
 }
 
-#navbar2{
-    height:100%;
-    width:20%;
+#navbar2 {
+    height: 100%;
+    width: 20%;
     display: flex;
 
 }
-#navbar2>div>img{
-    width:60px;
+
+#navbar2>div>img {
+    width: 60px;
 }
-#navbar2>div>h1{
-    color:red;
+
+#navbar2>div>h1 {
+    color: red;
     margin-left: 10px;
 }
-#navbar13{
-    display:flex;
+
+#navbar13 {
+    display: flex;
 }
-#navbar13>h1{
-    color:red;
+
+#navbar13>h1 {
+    color: red;
     margin-left: 50px;
+}
+
+#login {
+    margin-left: 150px;
+    width: 20%;
+    display: flex;
+    color: red;
+    justify-content: space-evenly;
+}
+
+#login>h1>a {
+    color: red;
+    text-decoration: none;
+}
+
+#navbar22>h1>a {
+    color: red;
+    text-decoration: none;
+}
+
+#navbar13 h1 a {
+    color: red;
+    text-decoration: none;
+}
+.hamburger {
+    position: relative;
+    display: none;
+    width: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    margin: 6px 0px;
+    transition: 0.4s;
+
+}
+
+
+#ham-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: rgb(195, 195, 197);
+    padding-top: 120px;
+    margin-top: 70px;
+
+}
+
+#ham-nav.is-active {
+    left: 0;
+}
+
+#ham-nav h1 a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: white;
+    color: red;
+    text-decoration: none;
+}
+
+
+/* //finish navbar// */
+
+#chef>img {
+    width: 100%;
+    height: 400px;
+
+}
+
+#vegitem {
+    color: red;
+    text-align: center;
+}
+
+#foodcolumn {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+#foodcolumn>div {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10%;
+    text-align: center;
+    color: red;
+    background-color: rgb(212, 201, 201);
+    padding-bottom: 20px;
+}
+
+#foodcolumn>div>button {
+    padding: 5px 5px;
+    border: 0px;
+    color: white;
+    background-color: rgb(216, 99, 99);
+}
+
+#foodcolumn>div>img {
+    width: 350px;
+    height: 300px;
 }
 
 /* footer-part */
 
-#footer{
-    width:100%;
-    height:400px;
+#footer {
+    margin-top: 20px;
+    width: 100%;
+    height: 400px;
     background-color: rgb(38, 38, 198);
-    color:white
+    color: white
 }
 
-#footer1{
-    display:flex;
-    width:100%;
+#footer1 {
+    display: flex;
+    width: 100%;
     justify-content: space-evenly;
 }
-#footer1>div{
-    width:25%;
+
+#footer1>div {
+    width: 25%;
     margin-top: 60px;
 }
-#footer1>div>h4{
+
+#footer1>div>h4 {
     margin-top: -10px;
-    
-}
-#footer1>div>h2{
-    margin-top: -10px;
-    
+
 }
 
-#footer13>div{
+#footer1>div>h2 {
+    margin-top: -10px;
+
+}
+
+#footer13>div {
     width: 100%;
-    display:flex;
+    display: flex;
 
 }
-#footer13>div>img{
+
+#footer13>div>img {
     width: 25%;
-    height:30px;
+    height: 30px;
     margin-right: 10px;
 }
 
-#footerlast{
-    width:100%;
-    display:flex;
+#footerlast {
+    width: 100%;
+    display: flex;
     margin-top: 50px;
     justify-content: space-between;
 }
-#icons{
-    width:20%;
-    display:flex;
+
+#icons {
+    width: 20%;
+    display: flex;
     justify-content: space-evenly;
 }
-#icons>img{
-    height:30px;
-    width:30px;
+
+#icons>img {
+    height: 30px;
+    width: 30px;
 
 }
-#nutrition{
-    width:70%;
+
+#nutrition {
+    width: 70%;
     margin-top: -15px;
 }
-#nutrition>div{
 
-    width:100%;
-    display:flex;
+#nutrition>div {
+
+    width: 100%;
+    display: flex;
     justify-content: space-evenly;
 }
-#nutrition>div>p{
-    
+
+#nutrition>div>p {
+
     margin-left: 20px;
     margin-right: 20px;
+}
+
+/* media screen */
+@media only screen and (max-width: 1500px) {
+
+    #foodcolumn {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    #chicken {
+        display: none;
+    }
+
+    #order {
+        display: none;
+    }
+
+    #vegfooditem {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #foodcolumn {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+@media only screen and (max-width: 1050px) {
+
+
+    .hamburger {
+        display: block;
+    }
+
+    #navbar13 {
+        display: none;
+    }
+
+    #perfect {
+        display: none;
+    }
+
+    #navbar2 {
+        display: none;
+    }
+
+    #navbar {
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+    #login {
+        margin-right: 150px;
+    }
+
+    #footerlast {
+        display: none;
+    }
+
 }

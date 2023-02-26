@@ -1,0 +1,551 @@
+#navbar {
+    height: 70px;
+    width: 100%;
+    margin-top: -22px;
+    padding-top: 5px;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+
+}
+
+.hamburger {
+    position: relative;
+    display: none;
+    width: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    margin: 6px 0px;
+    transition: 0.4s;
+
+}
+
+
+
+#ham-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: rgb(195, 195, 197);
+    padding-top: 120px;
+    margin-top: 70px;
+
+}
+
+#ham-nav.is-active {
+    left: 0;
+}
+
+#ham-nav h1 a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: white;
+    color: red;
+    text-decoration: none;
+}
+
+#navbar1 {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    margin-left: 10px;
+
+}
+
+#navbar1>div>img {
+    width: 60px;
+}
+
+#navbar2 {
+    height: 100%;
+    width: 20%;
+    display: flex;
+
+}
+
+#navbar2>div>img {
+    width: 60px;
+}
+
+#navbar2>div>h1 {
+    color: red;
+    margin-left: 10px;
+}
+
+#navbar13 {
+    display: flex;
+}
+
+#navbar13>h1 {
+    color: red;
+    margin-left: 50px;
+}
+
+#login {
+    margin-left: 150px;
+    width: 20%;
+    display: flex;
+    color: red;
+    justify-content: space-evenly;
+}
+
+#login>h1>a {
+    color: red;
+    text-decoration: none;
+}
+
+#navbar22>h1>a {
+    color: red;
+    text-decoration: none;
+}
+
+#navbar13 h1 a {
+    color: red;
+    text-decoration: none;
+}
+
+/* finish navbar */
+
+
+
+
+body {
+    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    font-family: 'Vibur', cursive;
+    /*   the main font */
+    font-family: 'Abel', sans-serif;
+    opacity: .95;
+    /* background-image: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%); */
+}
+
+/* styles */
+/* page */
+a {
+    color: black;
+}
+
+a:hover {
+    color: orangered;
+}
+
+/* append data */
+.heading {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1>span {
+    color: orangered;
+    font-family: playfair display;
+}
+
+.searchSection>h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: playfair display;
+}
+
+.foodShow>h1 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    font-family: playfair display;
+}
+
+#search {
+    width: 20rem;
+    height: 50px;
+    border: 1px solid orangered;
+    border-radius: 25px;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 15px;
+    font-family: playfair display;
+    color: orangered;
+
+}
+
+#searchBtn {
+    font-size: 22px;
+    font-weight: bold;
+    background: orangered;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#other {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#searchBtn:hover {
+    background: #fff;
+    color: orangered;
+}
+
+#show {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 25px;
+    margin-top: 20px;
+}
+
+.foodShow {
+    width: 80%;
+    margin: auto;
+}
+
+#show>div {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#show>div:hover {
+
+    transform: scale(1.05);
+}
+
+#show>div img {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+#show>div>.text,
+#show>div>.price {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    align-items: center;
+    margin: 10px;
+}
+
+#show>div>.text>p:nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
+    color: orangered;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#show>div>.text>p:nth-child(2):hover {
+    transform: scale(1.2);
+}
+
+
+#show>div>.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: orangered;
+
+}
+
+
+#show>div>.price button {
+    background: orangered;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#show>div>.price button:hover {
+    transform: scale(1.2);
+}
+
+.likeshow {
+    width: 40%;
+    margin: auto;
+
+}
+
+.likeshow>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.likeshow>div>img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.likeshow>div>button {
+    border: none;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.likeshow>div>button:hover {
+    transform: scale(1.2);
+}
+
+.likeshow>div>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+sup {
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 3px 5px;
+    border-radius: 50%
+}
+
+
+.notifDiv {
+    position: fixed;
+    top: 1%;
+    right: 1%;
+    background-color: rgb(216, 248, 215);
+    color: black;
+    font-size: 15px;
+    box-shadow: rgba(196, 120, 120, 0.2) 0px 2px 8px 0px;
+    border-radius: 3px;
+    padding: 10px;
+    z-index: 9;
+    display: none;
+    border-left: 5px solid rgb(105, 185, 105);
+}
+
+.notifDiv>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+}
+
+#contain {
+    display: grid;
+    grid-template-columns: repeat(200px, 1fr);
+    gap: 5%;
+    width: 95%;
+    margin: auto;
+}
+
+.wallet {
+    width: 300px;
+    height: auto;
+    padding: 25px 0;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(224, 124, 124, 0.2);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 8%;
+
+}
+
+.wallet>.showMoney {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.wallet input {
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 15px;
+    font-family: playfair display;
+    color: #000;
+}
+
+.wallet button {
+    background: orangered;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#totalDiv {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(150, 150, 150, 0.808);
+}
+
+#totalDiv>p {
+    font-size: 20px;
+    font-weight: bold;
+    color: orangered;
+}
+
+#totalDiv>p>span {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+}
+
+#totalDiv>a {
+    background: orangered;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+
+#add {
+    margin-top: -20px;
+}
+
+#totalDiv>a>i {
+    font-size: 20px;
+    color: rgb(62, 11, 145);
+}
+
+
+#st {
+    position: absolute;
+    margin-top: 100px;
+    right: 10%;
+    font-size: 20px;
+    font-weight: 500
+}
+
+#stWallet {
+    color: orangered;
+}
+
+
+/* media screen */
+@media only screen and (max-width: 1500px) {
+    #chicken {
+        display: none;
+    }
+
+    #order {
+        display: none;
+    }
+
+    #vegfooditem {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    #navbar13 {
+        display: none;
+    }
+
+    #perfect {
+        display: none;
+    }
+
+    #navbar2 {
+        display: none;
+    }
+
+    #navbar {
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+    #login {
+        margin-right: 150px;
+    }
+
+    #footerlast {
+        display: none;
+    }
+
+    #chicken {
+        display: none;
+    }
+
+    #order {
+        display: none;
+    }
+
+    #vegfooditem {
+        display: block;
+    }
+}

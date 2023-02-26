@@ -6,8 +6,9 @@ const userRouter = express.Router();
 const {userModel} = require("../models/user")
 
 
-userRouter.get("/",(req,res)=>{
-    res.send("data");
+userRouter.get("/",async (req,res)=>{
+    const user = await userModel.find();
+    res.send(user);
 })
 
 userRouter.post("/register",async (req,res)=>{
@@ -37,7 +38,7 @@ userRouter.post("/login", async (req, res) => {
             bcrypt.compare(password, user[0].password, (err, result) => {
                 if (result) {
                     let token = jwt.sign({ userId: user[0]._id }, "masai", { expiresIn: "3600s" })
-                    res.send({ "msg": "Logged In ", "token": token });
+                    res.send({ "msg": "Logged In ", "token": token ,"result":user[0]._id});
                 } else {
                     res.send({ "msg": "Wrong credentials" });
                 }

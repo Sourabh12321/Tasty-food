@@ -1,8 +1,17 @@
-
+window.onload = function () {
+    const hambtn1 = document.querySelector("#ham-nav");
+    const hambtn = document.querySelector(".hamburger");
+    hambtn.addEventListener("click",()=>{
+        hambtn.classList.toggle("is-active");
+        hambtn1.classList.toggle("is-active");
+    })
+}
 
 let slideshow = document.querySelector("#slideshow>img");
 
-let img = ["https://www.elpolloloco.com/content/img/hero/M2-2022-Family-Feast-Hero-Tablet-1536x1120.webp", "https://www.elpolloloco.com/content/img/hero/M4-2022-Combos-Hero-Tablet-1536x1120.webp", "https://www.elpolloloco.com/content/img/hero/M3-2021-Team-2-Hero-Tablet-1536x1120.webp", "https://www.elpolloloco.com/content/img/hero/M5-Free-Chips-Hero-Tablet-1536x1120.webp", "https://www.elpolloloco.com/content/img/hero/M1-2023-Grillers-Hero-Tablet-1536x1120.webp"];
+
+
+let img = ["https://www.qsrmagazine.com/sites/default/files/slideshow-images/slides/mcdonaldsglobal.jpg", "https://c4.wallpaperflare.com/wallpaper/495/760/53/cuisine-food-india-indian-wallpaper-preview.jpg", "https://post.healthline.com/wp-content/uploads/2020/08/Food_Bowl_Overhead_1200x628-facebook-1200x628.jpg", "https://wallpapercave.com/wp/wp4696898.png"];
 
 
 let index = 0;
@@ -35,7 +44,7 @@ productContainers.forEach((item, i) => {
 
 
 const getData = () => {
-    fetch("http://localhost:9074/fooditem/", {
+    fetch("https://shy-ruby-caiman-vest.cyclic.app/fooditem/", {
 
         headers: {
             "Authorization": localStorage.getItem("token")
@@ -60,6 +69,7 @@ getData()
 
 
 function displayTable(data){
+    console.log(data)
     let product_main = document.querySelector(".product-container");
     
     data.forEach((ele,item) => {
@@ -79,14 +89,14 @@ function displayTable(data){
         let button =  document.createElement("button");
         button.setAttribute("class","card-btn")
         div1.append(span, image, button);
-        button.textContent = "Add to wishlist";
+        button.textContent = "Add to cart";
         button.addEventListener("click",function(){
-            alert(`${ele.title} is added to Wishlist`)
-            let bookd = JSON.parse(localStorage.getItem("wish"))||[];
+            alert(`${ele.title} is added to cart`)
+            let bookd = JSON.parse(localStorage.getItem("cart"))||[];
             let a = ele;
             a.price = Math.floor(Math.random()*1000)
             bookd.push(a);
-            localStorage.setItem("wish",JSON.stringify(bookd));
+            localStorage.setItem("cart",JSON.stringify(bookd));
         })
 
         let div2 = document.createElement("div");

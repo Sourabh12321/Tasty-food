@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food App-Like</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/checkout.css">
+</head>
+<style>
+  a {
+    color: black;
+  }
+
+  a:hover {
+    color: orangered;
+  }
+</style>
+
+<body>
+  <div class="d-flex">
+    <form action="" method="" id="form">
+      <label>
+        <span class="fname">First Name <span class="required">*</span></span>
+        <input type="text" id="name" name="fname" required>
+      </label>
+      <label>
+        <span class="lname">Last Name <span class="required">*</span></span>
+        <input type="text" id="lastname" name="lname" required>
+      </label>
+
+      <label>
+        <span>Street Address <span class="required">*</span></span>
+        <input type="text" id="address" name="houseadd" placeholder="House number and street name" required>
+      </label>
+      <label>
+      </label>
+      <label>
+        <span>Town / City <span class="required">*</span></span>
+        <input type="text" id="city" name="city" required>
+      </label>
+      <label>
+        <span>State / County <span class="required">*</span></span>
+        <input type="text" id="country" name="country" required>
+      </label>
+      <label>
+        <span>Postcode / ZIP <span class="required">*</span></span>
+        <input type="text" id="pincode" name="ZIP" required>
+      </label>
+      <label>
+        <span>Phone <span class="required">*</span></span>
+        <input type="tel" id="number" name="number" required>
+      </label>
+      <label>
+        <span>Email Address <span class="required">*</span></span>
+        <input type="email" id="email" name="email" required>
+      </label>
+      <button type="button" id="placeOrder">Place Order</button>
+
+    </form>
+    <div class="Yorder">
+      <table>
+        <tr>
+          <th colspan="2">Your order</th>
+        </tr>
+        <tr>
+          <td>Product Name</td>
+          <td id="showName">food-items</td>
+        </tr>
+        <tr>
+          <td>Subtotal</td>
+          <td><i class="fa-solid fa-indian-rupee-sign"></i><span id="showtotalprice"></span></td>
+        </tr>
+        <tr>
+          <td>Shipping</td>
+          <td>Free shipping</td>
+        </tr>
+      </table><br>
+      <div>
+        <input type="radio" name="dbt" value="dbt" id="walletCheck" checked> Wallet
+      </div>
+      <p>
+        This payment will be deducted from your wallet balance.
+      </p>
+      <div>
+        <input type="radio" name="dbt" id="dbt" value="cd"> Cash on Delivery
+      </div>
+
+
+      
+    </div>
+  </div>
+</body>
+
+</html>
+<script src="../js/checkout.js"></script>
