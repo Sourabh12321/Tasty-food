@@ -25,7 +25,7 @@ function submit2(){
             console.log(data);
             localStorage.setItem("token",data.token)
             localStorage.setItem("id",data.result);
-            window.location.assign("../html/index.html")
+            window.location.assign("../index.html")
             
         }).catch((err) => {
             alert("user not registered")

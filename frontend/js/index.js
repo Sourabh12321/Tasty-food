@@ -122,3 +122,9 @@ function displayTable(data){
     })
 }
 
+document.querySelector(".veg").addEventListener("click",()=>{
+    window.location.assign("./html/veg.html");
+})
+document.querySelector(".nonveg").addEventListener("click",()=>{
+    window.location.assign("./html/non-veg.html");
+})
