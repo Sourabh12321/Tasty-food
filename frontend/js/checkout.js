@@ -1,6 +1,6 @@
 
 
-const btn = document.querySelector("form");
+const btn = document.querySelector("#btn");
 
 const token = localStorage.getItem("token");
 const id = localStorage.getItem("id");
@@ -43,13 +43,8 @@ function displayTable(data) {
 
 
 
-btn.addEventListener("submit", () => {
-    
-    if (form.name&& form.lastname && form.address&& form.country && form.city && form.pincode && form.number && form.email ) {
-        alert("order placed successfully");
-        window.location.assign("../html/index.html");
-    } else {
-        alert("please fill all the details");
-    }
+btn.addEventListener("click", () => {
+    alert("order placed successfully");
+    window.location.assign("../index.html");  
 })
 
