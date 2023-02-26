@@ -74,7 +74,7 @@ function displayTable(data) {
 }
 
 document.querySelector("#homepage").addEventListener("click",()=>{
-    window.location.assign("../html/index.html")
+    window.location.assign("../index.html")
 })
 
 
