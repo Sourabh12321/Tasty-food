@@ -15,9 +15,6 @@ Deployed Link :- https://willowy-raindrop-1b31ff.netlify.app/
 
 → Node Modules: mongoose.js | bcrypt | cors | dotenv | jsonwebtoken | nodemon
 
-# Site Map
-<img width="762" alt="flow click   collect" src="https://user-images.githubusercontent.com/65457075/221424314-284747f8-49f4-4b1d-bf6b-b2f6cf13306c.png">
-
 # API end points
 POST /users/register - to register
 POST /users/login - to login
