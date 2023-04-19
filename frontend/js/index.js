@@ -44,7 +44,7 @@ productContainers.forEach((item, i) => {
 
 
 const getData = () => {
-    fetch("https://shy-ruby-caiman-vest.cyclic.app/fooditem/", {
+    fetch("https://odd-erin-coati-wrap.cyclic.app/fooditem/", {
 
         headers: {
             "Authorization": localStorage.getItem("token")

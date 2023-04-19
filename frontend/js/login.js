@@ -10,7 +10,7 @@ function submit2(){
     } 
     
     const getData = () => {
-        fetch("https://shy-ruby-caiman-vest.cyclic.app/users/login", {
+        fetch("https://odd-erin-coati-wrap.cyclic.app/users/login", {
             method:"POST",
     
             headers: {

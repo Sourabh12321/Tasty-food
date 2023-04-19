@@ -6,7 +6,7 @@ function submit1(){
         password:document.querySelector(".password").value
     }
     const getData = () => {
-        fetch("https://shy-ruby-caiman-vest.cyclic.app/users/register", {
+        fetch("https://odd-erin-coati-wrap.cyclic.app/users/register", {
             method:"POST",
     
             headers: {

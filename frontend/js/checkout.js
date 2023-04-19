@@ -6,7 +6,7 @@ const token = localStorage.getItem("token");
 const id = localStorage.getItem("id");
 
 const getData = () => {
-    fetch(`https://shy-ruby-caiman-vest.cyclic.app/cart/${id}`, {
+    fetch(`https://odd-erin-coati-wrap.cyclic.app/cart/${id}`, {
         method: "GET",
 
         headers: {

@@ -16,7 +16,7 @@ form.addEventListener("submit",(e)=>{
     }
     console.log(obj);
 
-    fetch(`https://shy-ruby-caiman-vest.cyclic.app/create`, {
+    fetch(`https://odd-erin-coati-wrap.cyclic.app/create`, {
         method: "POST",
         body: JSON.stringify(obj),
         headers: {
@@ -29,7 +29,7 @@ form.addEventListener("submit",(e)=>{
 
 
 const getData = () => {
-    fetch("https://shy-ruby-caiman-vest.cyclic.app/users/", {
+    fetch("https://odd-erin-coati-wrap.cyclic.app/users/", {
         method: "GET",
 
         headers: {

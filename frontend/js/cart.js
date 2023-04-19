@@ -12,7 +12,7 @@ const id = localStorage.getItem("id");
 console.log(id);
 
 const getData = () => {
-    fetch(`https://shy-ruby-caiman-vest.cyclic.app/cart/${id}`, {
+    fetch(`https://odd-erin-coati-wrap.cyclic.app/cart/${id}`, {
         method: "GET",
 
         headers: {
@@ -86,7 +86,7 @@ function displayTable(data) {
 }
 
 function deletefunction(id){
-    fetch(`https://shy-ruby-caiman-vest.cyclic.app/cart/${id}`, {
+    fetch(`https://odd-erin-coati-wrap.cyclic.app/cart/${id}`, {
         method: "DELETE",
 
         headers: {

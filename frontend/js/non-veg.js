@@ -60,8 +60,9 @@ function displayTable(data){
         button.textContent = "Add to Cart"
         button.addEventListener("click",()=>{
             if(token){
-                alert("added to the cart")
                 addToCartfun(ele)
+                alert("added to the cart")
+                
 
             }else{
 
@@ -78,7 +79,7 @@ function displayTable(data){
 
 function addToCartfun(prod) {
 
-    fetch(`https://shy-ruby-caiman-vest.cyclic.app/cart/create`, {
+    fetch(`https://odd-erin-coati-wrap.cyclic.app/cart/create`, {
         method: "POST",
         body: JSON.stringify(prod),
         headers: {
