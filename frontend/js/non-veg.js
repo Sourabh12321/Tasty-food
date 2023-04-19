@@ -12,7 +12,7 @@ console.log("working");
 const token = localStorage.getItem("token");
 
 const getData = () => {
-    fetch("https://shy-ruby-caiman-vest.cyclic.app/fooditem/", {
+    fetch("https://odd-erin-coati-wrap.cyclic.app/fooditem/", {
         method:"GET",
 
         headers: {
