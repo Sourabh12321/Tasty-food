@@ -19,7 +19,8 @@ cartRouter.get("/:id", async (req, res) => {
 
 cartRouter.post('/create', async (req, res) => {
     try {
-        const cartproduct = new cartModel({ ...req.body, quantity: 1 });
+        console.log(req.body);
+        const cartproduct = new cartModel({...req.body, quantity: 1 });
         await cartproduct.save();
         res.send("Product has been added to the Cart");
     } catch (error) {
