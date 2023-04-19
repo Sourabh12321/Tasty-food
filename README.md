@@ -3,7 +3,7 @@
 
 Tasty food is a elpolloloco.com clone. Basically tasty food is an food-item website where you can order different types of food like veg or non veg.
 
-Deployed Link :- https://willowy-raindrop-1b31ff.netlify.app/
+Deployed Link :- https://ubiquitous-hummingbird-2adbdf.netlify.app
 
 
 
