@@ -1,31 +1,35 @@
+const form = document.querySelector("#signupform");
 
-function submit1(){
+form.addEventListener("click", (e) => {
+    e.preventDefault();
     let obj = {
-        name:document.querySelector(".name").value,
-        email:document.querySelector(".email").value,
-        password:document.querySelector(".password").value
+        name: document.querySelector(".name").value,
+        email: document.querySelector(".email").value,
+        password: document.querySelector(".password").value
     }
-    const getData = () => {
-        fetch("https://shy-ruby-caiman-vest.cyclic.app/users/register", {
-            method:"POST",
-    
+    if (obj.name !== "" && obj.email !== "" && obj.password !== "") {
+        fetch("http://localhost:7000/users/register", {
+            method: "POST",
             headers: {
-                "content-type":"application/json"
+                "content-type": "application/json"
             },
-            body:JSON.stringify(obj)
-    
+            body: JSON.stringify(obj)
+
         }).then((res) => {
             return res.json();
         }).then((data) => {
-            
+
             console.log(data);
-            
+            swal.fire({
+                title: "User registered successfully",
+                icon: "success",
+            })
             window.location.assign("../html/login.html")
-    
+
         })
-    
+
+
+
     }
-    getData()
 
-
-}
+})

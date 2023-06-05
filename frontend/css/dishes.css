@@ -75,9 +75,10 @@
 
 }
 
-#navbar1>div>img {
+#navbar1>div>a>img {
     width: 60px;
 }
+
 
 #navbar2 {
     height: 100%;

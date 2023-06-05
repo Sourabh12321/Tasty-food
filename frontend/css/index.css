@@ -70,8 +70,14 @@
   margin-left: 10px;
 
 }
+.name{
+  display: none;
 
-#navbar1>div>img {
+}
+#mainsystem{
+  display: flex;
+}
+#navbar1>div>a>img {
   width: 60px;
 }
 

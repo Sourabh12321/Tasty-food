@@ -1,13 +1,25 @@
 const express = require("express");
 const {foodModel} = require("../models/food");
 const jwt = require("jsonwebtoken");
-
+const {auth} = require("../middleware/authen")
 const foodRouter = express.Router();
 
 
 foodRouter.get("/", async (req, res) => {
     const fooditem = await foodModel.find();
-    res.send(fooditem);
+    res.send({"msg":fooditem})
+
+    
+})
+
+foodRouter.get("/veg", async (req, res) => {
+    const fooditem = await foodModel.find({"type":"veg"});
+    res.send({"msg":fooditem})
+})
+
+foodRouter.get("/Non-veg", async (req, res) => {
+    const fooditem = await foodModel.find({"type":"non-veg"});
+    res.send({"msg":fooditem})
 })
 
 foodRouter.post("/create", async (req, res) => {
