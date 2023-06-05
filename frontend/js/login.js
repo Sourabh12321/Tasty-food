@@ -8,11 +8,9 @@ function submit2(){
         email:document.querySelector("#mail").value,
         password:document.querySelector("#pass1").value
     } 
-    
-    const getData = () => {
-        fetch("https://odd-erin-coati-wrap.cyclic.app/users/login", {
+    if(obj.email!=="" && obj.password!==""){
+        fetch("http://localhost:7000/users/login", {
             method:"POST",
-    
             headers: {
                 "content-type":"application/json"
             },
@@ -22,17 +20,51 @@ function submit2(){
             return res.json();
         }).then((data) => {
             localStorage.clear();
-            console.log(data);
-            localStorage.setItem("token",data.token)
-            localStorage.setItem("id",data.result);
-            window.location.assign("../index.html")
+            if(data.msg=="Wrong password"){
+                swal.fire({
+                    title: "Wrong password",
+                    icon: "warning",
+                })
+            }else if(data.msg=="user not registered"){
+                swal.fire({
+                    title: "User is not registered",
+                    icon: "warning",
+                })
+                setTimeout(()=>{
+                    window.location.href = "sign.html"
+                },3000)
+            }else{
+                localStorage.setItem("token",data.token)
+                localStorage.setItem("id",data.result);
+                localStorage.setItem("name",data.name);
+    
+    
+                swal.fire({
+                    title: "login successfull",
+                    icon: "success",
+                })
+                setTimeout(()=>{
+                    window.location.href = "../index.html"
+                },5000)
+            }
+            
+           
             
         }).catch((err) => {
-            alert("user not registered")
+            swal.fire({
+                title: "User is not registered",
+                icon: "warning",
+            })
+            setTimeout(()=>{
+                window.location.href = "sign.html"
+            },3000)
         })
-    
+    }else{
+        alert("fill all the details")
     }
-    getData()
 
-
+        
+    
+    
+    
 }

@@ -15,14 +15,15 @@ app.use(cors());
 
 
 app.get("/",(req,res)=>{
-    res.send("home page")
+    res.send("home router")
 })
 
 
 
 app.use("/users", userRouter)
-app.use(auth);
 app.use("/fooditem",foodRouter)
+app.use(auth);
+
 app.use("/cart",cartRouter);
 
 

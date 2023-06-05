@@ -4,9 +4,26 @@ const btn = document.querySelector("#btn");
 
 const token = localStorage.getItem("token");
 const id = localStorage.getItem("id");
+let namee = document.querySelector("#login");
+let n = localStorage.getItem("name");
+if(n){
+    namee.innerHTML = "";
+    let h1 = document.createElement("h1");
+    h1.innerText = n;
+    let h2 = document.createElement("h1");
+    h2.innerText = "Logout"
+    h2.addEventListener("click",(e)=>{
+        
+        localStorage.clear();
+    })
+
+    let h3 = document.createElement("h1");
+    h3.innerText = "||"
+    namee.append(h1,h3,h2);
+}
 
 const getData = () => {
-    fetch(`https://odd-erin-coati-wrap.cyclic.app/cart/${id}`, {
+    fetch(`http://localhost:7000/cart/${id}`, {
         method: "GET",
 
         headers: {
@@ -44,7 +61,13 @@ function displayTable(data) {
 
 
 btn.addEventListener("click", () => {
-    alert("order placed successfully");
-    window.location.assign("../index.html");  
+    swal.fire({
+        title: "order placed successfully",
+        icon: "success",
+    })
+    setTimeout(()=>{
+        window.location.href = "index.html"
+    },3000)
+    
 })
 

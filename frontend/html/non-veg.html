@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/non-veg.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.6/dist/sweetalert2.min.css">
+
 </head>
 <body>
     <div id="ham-nav">
@@ -23,14 +26,13 @@
                 </button>
             </div>
             <div id="navbar12">
-                <img src="https://tse2.mm.bing.net/th?id=OIP.jISL3hOlBexXNoWaDiFcXAHaHa&pid=Api&P=0" alt="" />
+                <a href="../index.html"><img src="https://tse2.mm.bing.net/th?id=OIP.jISL3hOlBexXNoWaDiFcXAHaHa&pid=Api&P=0" alt="" /></a>
             </div>
             <div id="navbar13">
                 <h1><a href="../index.html">Home</a></h1>
                 <h1><a href="./dishes.html">Dishes</a></h1>
                 <h1><a href="./veg.html">Veg</a></h1>
                 <h1><a href="./non-veg.html">Non-Veg</a></h1>
-                <h1><a href="./cart.html">Cart</a></h1>
                 <h1><a href="">About</a></h1>
             </div>
         </div>
@@ -50,6 +52,14 @@
     </nav>
     <h1 ID="nonvegitem">NON-VEG FOOD-ITEMS</h1>
     <h1 ID="nonvegitem">NON-VEG FOOD-ITEMS</h1>
+    <div id="functionilty">
+        <select name="" id="sort">
+            <option value="">Sort by Price</option>
+            <option value="ASC">ASC</option>
+            <option value="DESC">DESC</option>
+        </select><br/>
+        <input type="text" id="search" placeholder="Search by name">
+    </div>
     <div id="foodcolumn">
         <!-- <div>
             <img src="https://tse4.mm.bing.net/th?id=OIP.cuANn7PBVfGH_OE5qSQtSAHaE7&pid=Api&P=0" alt=""></img>

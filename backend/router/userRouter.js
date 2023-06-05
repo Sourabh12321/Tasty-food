@@ -33,19 +33,20 @@ userRouter.post("/register",async (req,res)=>{
 userRouter.post("/login", async (req, res) => {
     const { email, password } = (req.body);
     try {
-        const user = await userModel.find({ email });
-        if (user.length > 0) {
-            bcrypt.compare(password, user[0].password, (err, result) => {
+        const user = await userModel.findOne({ email });
+        console.log(user);
+        if (user) {
+            bcrypt.compare(password, user.password, (err, result) => {
                 if (result) {
-                    let token = jwt.sign({ userId: user[0]._id }, "masai", { expiresIn: "3600s" })
-                    res.send({ "msg": "Logged In ", "token": token ,"result":user[0]._id});
+                    let token = jwt.sign({ userId: user._id }, "masai", { expiresIn: "3600s" })
+                    res.send({ "msg": "Logged In ", "token": token ,"result":user._id,"name":user.name});
                 } else {
-                    res.send({ "msg": "Wrong credentials" });
+                    res.send({ "msg": "Wrong password" });
                 }
             });
 
         } else {
-            res.send({ "msg": "Wrong credentials" });
+            res.send({ "msg": "user not registered" });
         }
     } catch (error) {
         res.send({ "msg": "New user Unable to  Logged In", "error": error.message });
