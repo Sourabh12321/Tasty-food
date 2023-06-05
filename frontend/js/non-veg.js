@@ -58,6 +58,7 @@ sort.addEventListener("change", (e) => {
         })
         displayTable(sortedData)
         console.log(sortedData)
+        console.log(sortedData)
     }
 })
 
